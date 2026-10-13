@@ -1,0 +1,13 @@
+ID,Algorithm,Category,InputSize,RuntimeSec,MemoryBytes,TotalOps,RiskLevel,Reason
+1,Floyd-Warshall,Dynamic Programming,40,0.07599700000719167,45760,130216,LOW,Behavior remains practical and well-bounded for tested input size.
+2,Prim's Algorithm,Minimum Spanning Tree,100,0.0014139999984763563,27912,1981,LOW,Behavior remains practical and well-bounded for tested input size.
+3,Kruskal's Algorithm,Minimum Spanning Tree,100,0.000281700020423159,12200,5275,LOW,Behavior remains practical and well-bounded for tested input size.
+4,Prim's Algorithm,Minimum Spanning Tree,100,0.014246499980799854,277672,15841,LOW,Behavior remains practical and well-bounded for tested input size.
+5,Kruskal's Algorithm,Minimum Spanning Tree,100,0.0007499000057578087,95280,48668,LOW,Behavior remains practical and well-bounded for tested input size.
+6,Floyd-Warshall,Dynamic Programming,80,0.6530532000178937,190464,1047201,MODERATE,Moderate execution time (0.653s); Cubic time O(n³) displays notable growth curve..
+7,N-Queen,Backtracking / Branch and Bound,12,0.24053570002433844,16280,435931,HIGH,Moderate execution time (0.241s); NP-Hard/Exponential growth causes rapid combinatorial search explosion..
+8,Travelling Salesperson Problem,Backtracking / Branch and Bound,12,0.5381444999948144,1752,767445,HIGH,Moderate execution time (0.538s); NP-Hard/Exponential growth causes rapid combinatorial search explosion..
+9,Prim's Algorithm,Minimum Spanning Tree,120,0.018052299972623587,351200,19993,LOW,Behavior remains practical and well-bounded for tested input size.
+10,Kruskal's Algorithm,Minimum Spanning Tree,120,0.0011380000214558095,119952,66260,LOW,Behavior remains practical and well-bounded for tested input size.
+11,Binomial Heap,Advanced Data Structures,4500,0.05580150001333095,361752,111512,LOW,Behavior remains practical and well-bounded for tested input size.
+12,Fibonacci Heap,Advanced Data Structures,4500,0.04368800000520423,460400,46851,LOW,Behavior remains practical and well-bounded for tested input size.

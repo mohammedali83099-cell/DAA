@@ -1,0 +1,20 @@
+============================================================
+        T H R M L   L A B O R A T O R Y   R E P O R T       
+         DAA Vulnerability & Stress Testing Summary          
+============================================================
+Total Experiments Executed: 11
+
+ID   Algorithm                    Input Size      Time (ms)  Risk      
+------------------------------------------------------------------------
+001  Floyd-Warshall               30              54.97      LOW       
+002  Floyd-Warshall               60              375.57     MODERATE  
+003  Floyd-Warshall               100             1831.22    HIGH      
+004  N-Queen                      8               28.85      MODERATE  
+005  N-Queen                      10              95.19      HIGH      
+006  N-Queen                      12              334.49     HIGH      
+007  Travelling Salesperson Problem 6               0.31       LOW       
+008  Travelling Salesperson Problem 9               38.87      MODERATE  
+009  Travelling Salesperson Problem 11              213.12     HIGH      
+010  Prim's Algorithm             200             91.54      LOW       
+011  Kruskal's Algorithm          200             10.50      LOW       
+========================================================================

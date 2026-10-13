@@ -1,0 +1,12 @@
+ID,Algorithm,Category,InputSize,RuntimeSec,MemoryBytes,TotalOps,RiskLevel,Reason
+1,Floyd-Warshall,Dynamic Programming,30,0.054973250000000085,25284,53964,LOW,Behavior remains practical and well-bounded for tested input size.
+2,Floyd-Warshall,Dynamic Programming,60,0.375568958,105836,443797,MODERATE,Moderate execution time (0.376s).
+3,Floyd-Warshall,Dynamic Programming,100,1.831222541,302036,2032462,HIGH,High execution time (1.831s); Cubic time O(n³) displays notable growth curve..
+4,N-Queen,Backtracking / Branch and Bound,8,0.028846833000000238,16049,35553,MODERATE,Exponential search space requires severe input size restriction..
+5,N-Queen,Backtracking / Branch and Bound,10,0.09518670799999995,20944,123331,HIGH,NP-Hard/Exponential growth causes rapid combinatorial search explosion..
+6,N-Queen,Backtracking / Branch and Bound,12,0.33448662500000026,22680,435931,HIGH,Moderate execution time (0.334s); NP-Hard/Exponential growth causes rapid combinatorial search explosion..
+7,Travelling Salesperson Problem,Backtracking / Branch and Bound,6,0.00030837499999991635,4192,428,LOW,Behavior remains practical and well-bounded for tested input size.
+8,Travelling Salesperson Problem,Backtracking / Branch and Bound,9,0.03886741599999999,3182,33471,MODERATE,Exponential search space requires severe input size restriction..
+9,Travelling Salesperson Problem,Backtracking / Branch and Bound,11,0.21312320899999992,2736,180286,HIGH,Moderate execution time (0.213s); NP-Hard/Exponential growth causes rapid combinatorial search explosion..
+10,Prim's Algorithm,Minimum Spanning Tree,200,0.09153774999999964,994124,55721,LOW,Behavior remains practical and well-bounded for tested input size.
+11,Kruskal's Algorithm,Minimum Spanning Tree,200,0.01050029100000005,333820,197656,LOW,Behavior remains practical and well-bounded for tested input size.
