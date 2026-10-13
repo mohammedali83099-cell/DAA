@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 import sys
+import os
 import argparse
+
+if sys.platform == "win32":
+    import io
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    if hasattr(sys.stderr, 'buffer'):
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 from cli.shell import THRMLShell
 from cli.commands import CommandHandler
 
