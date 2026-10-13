@@ -12,9 +12,25 @@ Located in [`THRML-algo_diagnostic_corner/`](THRML-algo_diagnostic_corner/):
 - **Algorithms Covered**: Binomial Heap, Fibonacci Heap, B-Tree, Red-Black Tree, Prim's, Kruskal's, Fractional Knapsack, 0/1 Knapsack, Floyd-Warshall, Matrix Chain Multiplication, Hamiltonian Problem, N-Queen, and TSP.
 - **Key Modules**: Input generators, empirical complexity analyzer, deterministic risk classifier (LOW, MODERATE, HIGH), and automated reporting.
 
-#### Quick Start:
+#### Quick Start Options:
+
+**Option A: Web Dashboard (Light-Themed Glassmorphic UI)**
+```bash
+# Windows
+THRML-algo_diagnostic_corner\launch_web.bat
+
+# macOS / Linux
+./THRML-algo_diagnostic_corner/launch_web.sh
+
+# Or directly:
+python THRML-algo_diagnostic_corner/thrml/api_server.py
+```
+Open **http://localhost:5000** in your browser.
+
+**Option B: Interactive Terminal Laboratory (CLI)**
 ```bash
 cd THRML-algo_diagnostic_corner/thrml
-python3 main.py
+python main.py
 ```
+
 For detailed usage, commands, and complexity references, see the [User Manual](THRML-algo_diagnostic_corner/USER_MANUAL.md).
