@@ -170,12 +170,11 @@ export function App() {
 
       {/* Footer */}
       <footer style={{
-        borderTop: '1px solid rgba(255, 255, 255, 0.9)',
-        background: 'rgba(255, 255, 255, 0.65)',
-        backdropFilter: 'blur(16px)',
+        borderTop: '1px solid #e2e8f0',
+        background: '#ffffff',
         padding: '16px 24px',
         textAlign: 'center',
-        fontSize: '0.8rem',
+        fontSize: '0.78rem',
         color: '#64748b'
       }}>
         <span>THRML — DAA Algorithm Vulnerability & Stress-Testing Laboratory • 13 Syllabus Algorithms Fully Instrumented</span>

@@ -39,15 +39,12 @@ export const Navbar: React.FC<Props> = ({
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      background: 'rgba(255, 255, 255, 0.82)',
-      backdropFilter: 'blur(24px)',
-      WebkitBackdropFilter: 'blur(24px)',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.9)',
-      boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.04)',
+      background: '#ffffff',
+      borderBottom: '1px solid #e2e8f0',
       padding: '12px 24px',
     }}>
       <div style={{
-        maxWidth: 1400,
+        maxWidth: 1360,
         margin: '0 auto',
         display: 'flex',
         alignItems: 'center',
@@ -58,36 +55,35 @@ export const Navbar: React.FC<Props> = ({
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{
-            width: 40,
-            height: 40,
-            borderRadius: 12,
-            background: 'linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%)',
+            width: 36,
+            height: 36,
+            borderRadius: 8,
+            background: '#1e3a5f',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#ffffff',
-            boxShadow: '0 6px 16px rgba(79, 70, 229, 0.25)'
           }}>
-            <Activity size={22} />
+            <Activity size={20} />
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <h1 style={{ fontSize: '1.25rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#0f172a' }}>
+              <h1 style={{ fontSize: '1.15rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#0f172a' }}>
                 THRML
               </h1>
               <span style={{
-                fontSize: '0.7rem',
+                fontSize: '0.68rem',
                 fontWeight: 700,
-                color: '#4f46e5',
-                background: 'rgba(79, 70, 229, 0.08)',
+                color: '#1e3a5f',
+                background: '#f1f5f9',
                 padding: '2px 6px',
                 borderRadius: 4,
-                border: '1px solid rgba(79, 70, 229, 0.15)'
+                border: '1px solid #e2e8f0'
               }}>
-                LABORATORY
+                ASSURANCE LAB
               </span>
             </div>
-            <p style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: 500 }}>
+            <p style={{ fontSize: '0.72rem', color: '#64748b', fontWeight: 500 }}>
               DAA Algorithm Vulnerability & Stress-Testing Suite
             </p>
           </div>
@@ -97,11 +93,11 @@ export const Navbar: React.FC<Props> = ({
         <nav style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 6,
-          background: 'rgba(241, 245, 249, 0.7)',
-          padding: 4,
-          borderRadius: 14,
-          border: '1px solid rgba(226, 232, 240, 0.8)'
+          gap: 4,
+          background: '#f8fafc',
+          padding: 3,
+          borderRadius: 8,
+          border: '1px solid #e2e8f0'
         }}>
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -114,45 +110,44 @@ export const Navbar: React.FC<Props> = ({
                   display: 'flex',
                   alignItems: 'center',
                   gap: 6,
-                  padding: '7px 14px',
-                  borderRadius: 10,
-                  fontSize: '0.84rem',
+                  padding: '6px 12px',
+                  borderRadius: 6,
+                  fontSize: '0.82rem',
                   fontWeight: isActive ? 600 : 500,
-                  color: isActive ? '#4f46e5' : '#475569',
+                  color: isActive ? '#0f172a' : '#64748b',
                   background: isActive ? '#ffffff' : 'transparent',
-                  border: isActive ? '1px solid rgba(255, 255, 255, 0.9)' : '1px solid transparent',
-                  boxShadow: isActive ? '0 2px 8px rgba(15, 23, 42, 0.05)' : 'none',
+                  border: isActive ? '1px solid #e2e8f0' : '1px solid transparent',
+                  boxShadow: isActive ? '0 1px 3px rgba(15, 23, 42, 0.04)' : 'none',
                   cursor: 'pointer',
-                  transition: 'all 0.18s ease'
+                  transition: 'all 0.15s ease'
                 }}
               >
-                <Icon size={16} color={isActive ? '#4f46e5' : '#64748b'} />
+                <Icon size={15} color={isActive ? '#1e3a5f' : '#94a3b8'} />
                 <span>{item.label}</span>
               </button>
             );
           })}
         </nav>
 
-        {/* Action / Status */}
+        {/* Right Status & Trigger */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: 6,
-            background: 'rgba(255, 255, 255, 0.8)',
-            padding: '5px 12px',
+            padding: '4px 10px',
             borderRadius: 9999,
-            border: '1px solid rgba(226, 232, 240, 0.8)',
-            fontSize: '0.78rem',
-            color: '#059669',
+            background: '#f0fdf4',
+            border: '1px solid #dcfce7',
+            fontSize: '0.74rem',
+            color: '#15803d',
             fontWeight: 600
           }}>
             <span style={{
-              width: 8,
-              height: 8,
+              width: 6,
+              height: 6,
               borderRadius: '50%',
-              background: '#10b981',
-              boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.2)'
+              background: '#22c55e'
             }} />
             <span>{status?.status || 'READY'}</span>
           </div>
@@ -161,9 +156,9 @@ export const Navbar: React.FC<Props> = ({
             onClick={onRunFullSuite}
             disabled={isRunningFullSuite}
             className="btn-primary"
-            style={{ fontSize: '0.82rem', padding: '7px 14px' }}
+            style={{ fontSize: '0.8rem', padding: '6px 14px' }}
           >
-            <Play size={14} />
+            <Play size={13} />
             <span>{isRunningFullSuite ? 'Running Audit...' : 'Run Full Suite'}</span>
           </button>
         </div>
