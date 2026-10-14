@@ -1,6 +1,5 @@
 import React from 'react';
 import { RiskLevel } from '../types';
-import { ShieldCheck, AlertTriangle, AlertOctagon } from 'lucide-react';
 
 interface Props {
   level: RiskLevel;
@@ -14,28 +13,31 @@ export const RiskBadge: React.FC<Props> = ({ level, size = 'md' }) => {
     lg: 'text-sm px-3.5 py-1.5'
   };
 
-  if (level === 'LOW') {
-    return (
-      <span className={`badge-risk badge-risk-low ${sizeClasses[size]}`}>
-        <ShieldCheck size={14} />
-        <span>LOW RISK</span>
-      </span>
-    );
-  }
+  const dotColors = {
+    LOW: '#10b981',
+    MODERATE: '#f59e0b',
+    HIGH: '#ef4444'
+  };
 
-  if (level === 'MODERATE') {
-    return (
-      <span className={`badge-risk badge-risk-moderate ${sizeClasses[size]}`}>
-        <AlertTriangle size={14} />
-        <span>MODERATE RISK</span>
-      </span>
-    );
-  }
+  const badgeClass = {
+    LOW: 'badge-risk-low',
+    MODERATE: 'badge-risk-moderate',
+    HIGH: 'badge-risk-high'
+  }[level];
+
+  const labelText = {
+    LOW: 'Low Risk',
+    MODERATE: 'Moderate Risk',
+    HIGH: 'High Risk'
+  }[level];
 
   return (
-    <span className={`badge-risk badge-risk-high ${sizeClasses[size]}`}>
-      <AlertOctagon size={14} />
-      <span>HIGH RISK</span>
+    <span className={`badge-risk ${badgeClass} ${sizeClasses[size]}`}>
+      <span 
+        className="badge-dot" 
+        style={{ backgroundColor: dotColors[level] }} 
+      />
+      <span>{labelText}</span>
     </span>
   );
 };
